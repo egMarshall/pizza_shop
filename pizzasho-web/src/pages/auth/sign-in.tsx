@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { toast } from 'sonner';
 
 // Components
 import { Button } from '@/components/ui/button';
@@ -21,8 +22,22 @@ export function SignIn() {
   } = useForm<SignInForm>();
 
   async function handleSignIn(data: SignInForm) {
-    console.log(data);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      console.log(data);
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      toast.success('Enviamos um link de autenticação para seu e-mail!', {
+        action: {
+          label: 'Reenviar',
+          onClick: () => {
+            toast.dismiss();
+            handleSignIn(data);
+          },
+        },
+      });
+    } catch (error) {
+      toast.error('Ocorreu um erro ao enviar o link de autenticação!');
+    }
   }
 
   return (
