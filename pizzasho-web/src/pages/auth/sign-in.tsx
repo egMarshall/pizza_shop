@@ -24,7 +24,6 @@ export function SignIn() {
 
   async function handleSignIn(data: SignInForm) {
     try {
-      console.log(data);
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
       toast.success('Enviamos um link de autenticação para seu e-mail!', {
