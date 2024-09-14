@@ -51,7 +51,7 @@ export function PopularProductsChart() {
                       dominantBaseline="central"
                     >
                       {popularProducts[index].product.length > 12
-                        ? popularProducts[index].product.substring(0, 8).concat('...')
+                        ? popularProducts[index].product.substring(0, 12).concat('...')
                         : popularProducts[index].product}{' '}
                       ({value})
                     </text>
