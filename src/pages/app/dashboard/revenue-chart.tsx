@@ -9,7 +9,6 @@ import { DateRangePicker } from '@/components/ui/date-range-picker';
 import { DateRange } from 'react-day-picker';
 import { useMemo, useState } from 'react';
 import { subDays } from 'date-fns';
-import { date } from 'zod';
 
 export function RevenueChart() {
   const [dateRange, setDateRange] = useState<DateRange | undefined>({
