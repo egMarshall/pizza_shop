@@ -6,15 +6,31 @@ export const getDailyRevenueInPeriodMock = http.get<never, never, GetDailyRevenu
   async () => {
     return HttpResponse.json([
       {
-        date: '2021-08-01',
+        date: '01/08/2024',
         receipt: 1000,
       },
       {
-        date: '2021-08-02',
+        date: '02/08/2024',
         receipt: 2000,
       },
       {
-        date: '2021-08-03',
+        date: '03/08/2024',
+        receipt: 3000,
+      },
+      {
+        date: '04/08/2024',
+        receipt: 7000,
+      },
+      {
+        date: '05/08/2024',
+        receipt: 2000,
+      },
+      {
+        date: '06/08/2024',
+        receipt: 4000,
+      },
+      {
+        date: '07/08/2024',
         receipt: 3000,
       },
     ]);

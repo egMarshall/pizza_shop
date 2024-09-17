@@ -5,7 +5,7 @@ export const getMonthRevenueAmountMock = http.get<never, never, GetMonthRevenueA
   '/metrics/month-receipt',
   async () => {
     return HttpResponse.json({
-      receipt: 2000,
+      receipt: 20000,
       diffFromLastMonth: -30,
     });
   },
